@@ -19,13 +19,14 @@ C 기반 Framework를 Java 기반 Spirng으로 Consersion 하여 구현한다. �
 2. 요청 타입: POST
 3. Content-Type: application/json
 4. API Request Body   
+
 | 필드          | 필드명           | 값       | 필수값여부 | 설명                                     |   
-|---------------|------------------|----------|------------|------------------------------------------|   
+|---------------|------------------|----------|------------|--------------------------------------- |   
 | svc_modu_id   | 서비스모듈ID     | APPROVE  | Y          | space or null 허용되지 않음              |   
-| telgrm_fg     | 전문구분         | ON       | N          |                                          |   
-| onoff_mcht_fg | 온오프라인구분   | 2        | N          | null 값 미 허용 (1: 오프라인, 2: 온라인) |   
-| mbrsh_pgm_id  | 멤버쉽프로그램ID | A        | N          | null or space 허용                       |   
-| mcht_no       | 가맹점번호       | 20072964 | N          | null or space 허용                       |      
+| telgrm_fg     | 전문구분         | ON       | N          |                                         |   
+| onoff_mcht_fg | 온오프라인구분   | 2        | N          | null 값 미 허용 (1: 오프라인, 2: 온라인)  |   
+| mbrsh_pgm_id  | 멤버쉽프로그램ID | A        | N          | null or space 허용                      |   
+| mcht_no       | 가맹점번호       | 20072964 | N          | null or space 허용                      |      
 
 5. 에러코드   
 * AP_7777: 필수값 미 존재   
