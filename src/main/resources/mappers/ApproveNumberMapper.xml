@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="me.spring5.mvc.mapper.ApproveNumberMapper">
+    <select id="getMchtChk" parameterType="String" resultType="me.spring5.mvc.vo.MCT_MASTER_MST_TPCOM_VS2002_OUTSTR">
+        select
+               crdt_sts    as crdt_sts
+              ,mcht_fg     as mcht_fg
+              ,cpn_clos_dy as cpn_clos_dy
+          from mct_master_mst
+         where mbrsh_pgm_id = #{mbrsh_pgm_id}
+           and mcht_no      = #{mcht_no}
+    </select>
+    <select id="getApproveDateAndTime" parameterType="String" resultType="me.spring5.mvc.vo.DUAL_TPCOM_VS2005_OUTSTR">
+        select
+               DATE_FORMAT(now(), '%Y%m%d') as aprv_dy
+              ,DATE_FORMAT(now(), '%H%i%s') as aprv_tm
+        from DUAL
+    </select>
+    <select id="getApproveNumberOffline" parameterType="String" resultType="me.spring5.mvc.vo.APRV_NO_OCBOFF_SEQ_VS2001_OUTSTR">
+        select
+               seq_currval as aprv_no
+              ,seq_currval as rep_aprv_no
+        from aprv_no_ocboff_seq
+    </select>
+    <select id="getApproveNumberOnline" parameterType="String" resultType="me.spring5.mvc.vo.APRV_NO_OCBONL_SEQ_VS2001_OUTSTR">
+        select
+                seq_currval as aprv_no
+               ,seq_currval as rep_aprv_no
+        from aprv_no_ocbonl_seq
+    </select>
+    <update id="getApproveCurrentOffline" >
+        update aprv_no_ocboff_seq
+        set seq_currval=LAST_INSERT_ID(seq_currval + 1)
+    </update>
+    <update id="getApproveCurrentOnline" >
+        update aprv_no_ocbonl_seq
+        set seq_currval=LAST_INSERT_ID(seq_currval + 1)
+    </update>
+</mapper>
