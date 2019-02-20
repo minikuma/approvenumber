@@ -14,6 +14,11 @@ C 기반 Framework를 Java 기반 Spirng으로 Consersion 하여 구현한다. �
 
 ---   
 
+### Class Diagram   
+![default](https://user-images.githubusercontent.com/20740884/53078009-a5f03600-3536-11e9-994f-29be6766eb3f.JPG)
+
+---   
+
 ### API
 1. URL: http://url-name/aprv_no
 2. 요청 타입: POST
