@@ -38,7 +38,7 @@ C 기반 Framework를 Java 기반 Spirng으로 Consersion 하여 구현한다. �
   case1) svc_modu_id null or space인 경우   
   case2) onoff_mcht_fg, mcht_no 값이 모두 null or space인 경우   
 * AP_8830: 가맹점 미 등록   
-  case1) mcht_fg의 값이 "2"이고 mcht_no을 값을 조회했을 때 미 존재하는 경우   
+  case1) onoff_mcht_fg의 값이 "2"이고 mcht_no을 값을 조회했을 때 미 존재하는 경우   
 * AP_9080: DB Fail      
 
 ---   
