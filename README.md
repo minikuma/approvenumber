@@ -46,7 +46,7 @@ C 기반 Framework를 Java 기반 Spirng으로 Consersion 하여 구현한다. �
 ### 요청/응답 예시   
 1. 정상   
 * 요청   
-```       
+```json       
 {
     "svc_modu_id": "APPROVE",
     "telgrm_fg": "ON",
@@ -56,7 +56,7 @@ C 기반 Framework를 Java 기반 Spirng으로 Consersion 하여 구현한다. �
 }   
  ```   
 * 응답   
-```   
+```json   
 {
     "apprvoeNumber": {
         "aprv_dy": "20190220",
@@ -69,7 +69,7 @@ C 기반 Framework를 Java 기반 Spirng으로 Consersion 하여 구현한다. �
 ```   
 2. 에러   
 * 요청   
-```   
+```json   
 {
     "svc_modu_id": "",
     "telgrm_fg": "ON",
@@ -79,7 +79,7 @@ C 기반 Framework를 Java 기반 Spirng으로 Consersion 하여 구현한다. �
 }   
 ```   
 * 응답   
-```   
+```json   
 {
     "apprvoeNumber": {
         "aprv_dy": null,
